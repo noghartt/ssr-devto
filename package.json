@@ -1,0 +1,24 @@
+{
+	"name": "ssr-devto",
+	"version": "0.0.1",
+	"dependencies": {
+		"@koa/router": "^12.0.0",
+		"koa": "^2.14.2",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@types/koa": "^2.13.8",
+		"@types/koa__router": "^12.0.0",
+		"@types/react": "^18.2.21",
+		"@types/react-dom": "^18.2.7",
+		"tsup": "^7.2.0",
+		"typescript": "^5.2.2"
+	},
+	"scripts": {
+		"start": "node dist/index.js",
+		"dev": "tsup src/ --format cjs --dts-resolve --clean --watch",
+		"prebuild": "rm -rf dist",
+		"build": "tsup src/ --format cjs --dts-resolve --clean"
+	}
+}
